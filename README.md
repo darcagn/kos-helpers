@@ -9,6 +9,10 @@ Instead of juggling multiple `environ.sh` scripts in each KOS dir, the scripts p
 * Clone: `git clone https://github.com/darcagn/kos-helpers /opt/toolchains/dc/kos-helpers`
 * Add `/opt/toolchains/dc/kos-helpers/kos-shell.sh` to your shell's `.bashrc`, `.zshrc`, etc.
 * `mkdir -p /opt/toolchains/dc/kos-toolchains`
+* Place move your KOS toolchain directories to `/opt/toolchains/dc/kos-toolchains`, giving each directory a name you'll use later in your environment settings
+
+## Building toolchains
+If you'd like to build various toolchains to go with this configuration, complete the following steps:
 * Clone a KOS repo: `git clone https://github.com/KallistiOS/KallistiOS.git /opt/toolchains/dc/kos-build`
 * Enter the `dc-chain` directory: `cd /opt/toolchains/dc/kos-build/utils/dc-chain`
 * Build all toolchain profiles by running `/opt/toolchains/dc/kos-helpers/build-all-chains.sh`
