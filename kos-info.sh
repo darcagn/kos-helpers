@@ -41,9 +41,9 @@ if [ ! -d "${KOS_PORTS}/lib/.kos-ports" ]; then
 else
   for FILE in "${KOS_PORTS}/lib/.kos-ports"/*; do
     FILENAME=$(basename "$FILE")
-    if [ "$FILENAME" != "README" ]; then
-      echo -n "$FILENAME-"
-      echo -n "`cat $FILENAME` "
+    if [ "${FILENAME}" != "README" ]; then
+      echo -n "${FILENAME}-"
+      echo -n "$(cat ${FILE}) "
     fi
   done
 echo ""
