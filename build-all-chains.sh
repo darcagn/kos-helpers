@@ -32,8 +32,9 @@ for file in profiles/profile.*.mk; do
 
     echo "***************************************"
     echo "+++ Building $profile_name toolchain..."
-    echo ${make_cmd}
+    echo "${make_cmd}"
     echo "***************************************"
+    echo "${make_cmd}" | bash
     echo "Build completed at $(date '+%Y-%m-%d %r')" >> $sh_toolchain_path/build_date.txt
     echo "***********************************************"
     echo "+++ Cleaning up after building $profile_name..."
