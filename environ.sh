@@ -32,7 +32,7 @@ export KOS_CHAIN="stable"
 #export KOS_CHAIN="12.3.0"
 #export KOS_CHAIN="11.4.0"
 #export KOS_CHAIN="10.5.0"
-#export KOS_CHAIN="9.5.0"         # binutils 2.34
+#export KOS_CHAIN="9.5.0-winxp"   # binutils 2.34
 
 # legacy toolchains
 #export KOS_CHAIN="9.3.0-legacy"  # newlib 3.3.0
