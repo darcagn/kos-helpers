@@ -1,5 +1,8 @@
 # kos-helpers
 
+## Purpose
+This repo contains several helper scripts that assist KOS power users in managing multiple KOS dirs, toolchains, etc. while avoiding configuration issues that may creep up attempting this.
+
 ## Install
 * Clone: `git clone https://github.com/darcagn/kos-helpers /opt/toolchains/dc/kos-helpers`
 * Add `/opt/toolchains/dc/kos-helpers/kos-shell.sh` to your shell's `.bashrc`, `.zshrc`, etc.
