@@ -3,6 +3,8 @@
 ## Purpose
 This repo contains several helper scripts that assist KOS power users in managing multiple KOS dirs, toolchains, etc. while avoiding configuration issues that may creep up attempting this.
 
+Instead of juggling multiple `environ.sh` scripts in each KOS dir, the scripts provide a global environment setting mechanism that can be modified and applied using provided commands. Switching KOS dirs or toolchains also updates all of the symlinks within the toolchain to point to the KOS dir's resources to keep KOS dir and toolchain dir synchronized.
+
 ## Install
 * Clone: `git clone https://github.com/darcagn/kos-helpers /opt/toolchains/dc/kos-helpers`
 * Add `/opt/toolchains/dc/kos-helpers/kos-shell.sh` to your shell's `.bashrc`, `.zshrc`, etc.
