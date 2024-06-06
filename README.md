@@ -15,3 +15,5 @@
 * `kos-build <PATH>`: Apply KOS environment using `<PATH>` as `$KOS_BASE` and build KOS.
 * `kos-rebuild <PATH>`: Apply KOS environment using `<PATH>` as `$KOS_BASE`, make clean, and build KOS.
 * `kos-info`: Dump information about your current KOS environment to stdout.
+
+<img width="675" alt="image" src="https://github.com/darcagn/kos-helpers/assets/5105103/48080da2-c87f-4464-bde5-7a8ad141cf9a">
