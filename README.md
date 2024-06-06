@@ -7,7 +7,7 @@
 * Clone a KOS repo: `git clone https://github.com/KallistiOS/KallistiOS.git /opt/toolchains/dc/kos-build`
 * Enter the `dc-chain` directory: `cd /opt/toolchains/dc/kos-build/utils/dc-chain`
 * Build all toolchain profiles by running `/opt/toolchains/dc/kos-helpers/build-all-chains.sh`
-** Each toolchain profile will be built to `/opt/toolchains/dc/kos-toolchains/<PROFILE_NAME>` 
+  * Each toolchain profile will be built to `/opt/toolchains/dc/kos-toolchains/<PROFILE_NAME>` 
 
 ## Use
 * `kos-editenv`: Bring up text editor to modify KOS environment settings.
