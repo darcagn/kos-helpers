@@ -1,7 +1,7 @@
 # kos-helpers
 
 ## Install
-* Clone to /opt/toolchains/dc/kos-helpers
+* Clone to `/opt/toolchains/dc/kos-helpers`
 * Add `/opt/toolchains/dc/kos-helpers/kos-shell.sh` to your `.bashrc`, `.zshrc`, etc.
 * `mkdir -p /opt/toolchains/dc/kos-toolchains`
 * Clone a KOS repo: `git clone https://github.com/KallistiOS/KallistiOS.git /opt/toolchains/dc/kos-build`
