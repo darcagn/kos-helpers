@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export KOS_INC_PATHS=""
 export KOS_CFLAGS=""
 export KOS_CPPFLAGS=""

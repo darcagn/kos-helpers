@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Include associated functions
 . $(dirname $(readlink -f "${0}"))/environ-fn.sh
 
