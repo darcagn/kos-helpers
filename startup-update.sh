@@ -21,7 +21,6 @@ if ! [ -f "$STARTUP_FILE" ]; then
 fi
 CRT1PATH=$(sh-elf-gcc ${KOS_SH4_PRECISION} -print-file-name=crt1.o)
 if [ -f "${CRT1PATH}" ]; then
-#if [[ "${CRT1PATH}" == "${KOS_CC_BASE}"* ]]; then
   echo "Updating your startup file at ${CRT1PATH}..."
   cp ${KOS_BASE}/kernel/arch/dreamcast/kernel/startup.o ${CRT1PATH}
 else
