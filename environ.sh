@@ -3,10 +3,8 @@
 # Include associated functions
 . $(dirname $(readlink -f "${0}"))/environ-fn.sh
 
-if ! kos_check_dir "${1}"; then return 1; fi
+if ! kos_check_dir "${1}"; then return 1; else export KOS_BASE=$(readlink -f "${1}"); fi
 
-# Get desired KOS path
-export KOS_BASE=$(readlink -f "${1}")
 # kos-ports install directory
 export KOS_PORTS="${KOS_BASE}/../kos-ports"
 
@@ -97,8 +95,8 @@ export DC_ARM_PREFIX="arm-eabi"
 export KOS_GENROMFS="${KOS_BASE}/utils/genromfs/genromfs"
 
 # Additional Tools Path
-if [[ ":$PATH:" != *":${KOS_CC_BASE}/bin:/opt/toolchains/dc/bin:"* ]]; then
-  export PATH="${PATH}:${KOS_CC_BASE}/bin:/opt/toolchains/dc/bin"
+if [[ ":$PATH:" != *":${KOS_CC_BASE}/bin:${DC_TOOLS_BASE}:"* ]]; then
+  export PATH="${PATH}:${KOS_CC_BASE}/bin:${DC_TOOLS_BASE}"
 fi
 
 # Shared Compiler Configuration
