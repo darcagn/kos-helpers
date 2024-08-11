@@ -9,7 +9,7 @@ Instead of juggling multiple `environ.sh` scripts in each KOS dir, the scripts p
 * Clone: `git clone https://github.com/darcagn/kos-helpers /opt/toolchains/dc/kos-helpers`
 * Add `/opt/toolchains/dc/kos-helpers/kos-shell.sh` to your shell's `.bashrc`, `.zshrc`, etc.
 * `mkdir -p /opt/toolchains/dc/kos-toolchains`
-* Place move your KOS toolchain directories to `/opt/toolchains/dc/kos-toolchains`, giving each directory a name you'll use later in your environment settings
+* Move your KOS toolchain directories to `/opt/toolchains/dc/kos-toolchains`, giving each directory a name you'll use later in your environment settings
 
 ## Building toolchains
 If you'd like to build various toolchains to go with this configuration, complete the following steps:
