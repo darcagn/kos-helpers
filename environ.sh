@@ -15,32 +15,22 @@ export KOS_SUBARCH="pristine"
 # SH Compiler Symlink, Prefix, and Multichain Path
 export KOS_CC_BASE="/opt/toolchains/dc/sh-elf"
 export KOS_CC_PREFIX="sh-elf"
-export KOS_MULTICHAIN_PATH="/opt/toolchains/dc/kos-toolchains"
+export KOS_MULTICHAIN_PATH="/opt/toolchains/dc/toolchains"
 
 # SH Toolchain Profile
 # stable toolchain (13.2.0 with newlib 4.3.0)
 export KOS_CHAIN="stable"
 
-# alt toolchains using newlib 4.4.0
-#export KOS_CHAIN="15.0.0-dev"
-#export KOS_CHAIN="14.1.1-dev"
-#export KOS_CHAIN="14.1.0"
+# alt toolchain profiles
+#export KOS_CHAIN="16.0.0-dev"
+#export KOS_CHAIN="15.1.1-dev"
+#export KOS_CHAIN="15.1.0"
+#export KOS_CHAIN="14.2.1-dev"
+#export KOS_CHAIN="14.2.0"
 #export KOS_CHAIN="13.3.1-dev"
 #export KOS_CHAIN="13.3.0"
-#export KOS_CHAIN="12.3.0"
-#export KOS_CHAIN="11.4.0"
-#export KOS_CHAIN="10.5.0"
-#export KOS_CHAIN="9.5.0-winxp"   # binutils 2.34
+#export KOS_CHAIN="9.5.0-winxp"
 
-# legacy toolchains
-#export KOS_CHAIN="9.3.0-legacy"  # newlib 3.3.0
-#export KOS_CHAIN="4.7.4-legacy"  # newlib 2.0.0
-
-# specialty toolchains
-# GCCRS with newlib 4.4.0
-#export KOS_CHAIN="gccrs-dev"
-# GCC for libgccjit for rustc
-#export KOS_CHAIN="rustc-dev"
 # current dreamshell toolchain (stable with fastmem patch)
 #export KOS_CHAIN="dreamshell"
 
@@ -53,8 +43,8 @@ export KOS_LOADER_IP="dc-tool-ip -x"
 export KOS_LOADER=${KOS_LOADER_IP}
 
 # SH4 Floating Point Precision
-#export KOS_SH4_PRECISION="-m4-single"
-export KOS_SH4_PRECISION="-m4-single-only"
+export KOS_SH4_PRECISION="-m4-single"
+#export KOS_SH4_PRECISION="-m4-single-only"
 
 # Optimization Level
 export KOS_CFLAGS="${KOS_CFLAGS} -O2"
@@ -63,6 +53,7 @@ export KOS_CFLAGS="${KOS_CFLAGS} -O2"
 # Additional Optimizations
 #export KOS_CFLAGS="${KOS_CFLAGS} -freorder-blocks-algorithm=simple"
 #export KOS_CFLAGS="${KOS_CFLAGS} -flto=auto"
+#export KOS_CFLAGS="${KOS_CFLAGS} -ffat-lto-objects"
 
 # Frame Pointers
 export KOS_CFLAGS="${KOS_CFLAGS} -fomit-frame-pointer"

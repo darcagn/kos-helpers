@@ -8,15 +8,17 @@ Instead of juggling multiple `environ.sh` scripts in each KOS dir, the scripts p
 ## Install
 * Clone: `git clone https://github.com/darcagn/kos-helpers /opt/toolchains/dc/kos-helpers`
 * Add `/opt/toolchains/dc/kos-helpers/kos-shell.sh` to your shell's `.bashrc`, `.zshrc`, etc.
-* `mkdir -p /opt/toolchains/dc/kos-toolchains`
-* Move your KOS toolchain directories to `/opt/toolchains/dc/kos-toolchains`, giving each directory a name you'll use later in your environment settings
+* `mkdir -p /opt/toolchains/dc/toolchains`
+* Place move your KOS toolchain directories to `/opt/toolchains/dc/toolchains`, giving each directory a name you'll use later in your environment settings
 
 ## Building toolchains
 If you'd like to build various toolchains to go with this configuration, complete the following steps:
 * Clone a KOS repo: `git clone https://github.com/KallistiOS/KallistiOS.git /opt/toolchains/dc/kos-build`
 * Enter the `dc-chain` directory: `cd /opt/toolchains/dc/kos-build/utils/dc-chain`
 * Build all toolchain profiles by running `/opt/toolchains/dc/kos-helpers/build-all-chains.sh`
-  * Each toolchain profile will be built to `/opt/toolchains/dc/kos-toolchains/<PROFILE_NAME>` 
+  * Each toolchain profile will be built to `/opt/toolchains/dc/toolchains/<PROFILE_NAME>`
+  * Build only development profiles by passing the `--dev-only` option to the script
+  * Set the number of jobs by passing e.g. `-j32` to the script
 
 ## Use
 * `kos-editenv`: Bring up text editor to modify KOS environment settings.

@@ -38,21 +38,8 @@ kos_adjust_toolchain_dir() {
   rm "${KOS_CHAIN_DIR}/sh-elf/include/pthread.h"
   ln -nsf "${KOS_BASE}/include/pthread.h" "${KOS_CHAIN_DIR}/sh-elf/include/pthread.h"
 
-  # Handle libpthread scenarios
-  if [ -d "${KOS_BASE}/include/sys/_pthreadtypes.h" ]; then
-    if grep -q "joel.sherrill@OARcorp.com" "${KOS_CHAIN_DIR}/sh-elf/include/sys/_pthreadtypes.h"; then
-      echo "Error: This KOS has libpthread but the toolchain is not equipped for it!"
-      return 1
-    else
-      rm "${KOS_CHAIN_DIR}/sh-elf/include/sys/_pthreadtypes.h"
-      ln -nsf "${KOS_BASE}/include/sys/_pthreadtypes.h" "${KOS_CHAIN_DIR}/sh-elf/include/sys/_pthreadtypes.h"
-    fi
-  else
-    if ! grep -q "joel.sherrill@OARcorp.com" "${KOS_CHAIN_DIR}/sh-elf/include/sys/_pthreadtypes.h"; then
-      echo "Error: This KOS is pre-libpthread but the toolchain is equipped for libpthread!"
-      return 1
-    fi
-  fi
+  rm "${KOS_CHAIN_DIR}/sh-elf/include/sys/_pthreadtypes.h"
+  ln -nsf "${KOS_BASE}/include/sys/_pthreadtypes.h" "${KOS_CHAIN_DIR}/sh-elf/include/sys/_pthreadtypes.h"
 
   rm "${KOS_CHAIN_DIR}/sh-elf/include/sys/_pthread.h"
   ln -nsf "${KOS_BASE}/include/sys/_pthread.h" "${KOS_CHAIN_DIR}/sh-elf/include/sys/_pthread.h"
