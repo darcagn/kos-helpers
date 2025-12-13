@@ -18,7 +18,7 @@ If you'd like to build various toolchains to go with this configuration, complet
 * Build all toolchain profiles by running `/opt/toolchains/dc/kos-helpers/build-all-chains.sh`
   * Each toolchain profile will be built to `/opt/toolchains/dc/toolchains/<PROFILE_NAME>`
   * Build only development profiles by passing the `--dev-only` option to the script
-  * Set the number of jobs by passing e.g. `-j32` to the script
+  * Set the number of jobs by passing e.g. `-j32` to the script; otherwise, it will autodetect your threads.
 
 ## Use
 * `kos-editenv`: Bring up text editor to modify KOS environment settings.
