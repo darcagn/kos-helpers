@@ -46,8 +46,5 @@ kos_adjust_toolchain_dir() {
 
   rm "${KOS_CHAIN_DIR}/sh-elf/include/sys/lock.h"
   ln -nsf "${KOS_BASE}/include/sys/lock.h" "${KOS_CHAIN_DIR}/sh-elf/include/sys/lock.h"
-
-  rm "${KOS_CHAIN_DIR}/sh-elf/include/sys/sched.h"
-  ln -nsf "${KOS_BASE}/include/sys/sched.h" "${KOS_CHAIN_DIR}/sh-elf/include/sys/sched.h"
 }
 

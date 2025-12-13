@@ -1,7 +1,7 @@
 #!/bin/bash
 
 build_dev_toolchains_only=false
-make_jobs=2
+make_jobs=$(getconf _NPROCESSORS_ONLN)
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -30,26 +30,22 @@ if [ "${PWD##*/}" != "dc-chain" ]; then
   exit 1
 fi
 
-for file in profiles/profile.*.mk; do
+for file in profiles/dreamcast/*.mk; do
   if [ -f "$file" ]; then
-    profile_name="${file#*/profile.}"
+    profile_name="${file#*/dreamcast/}"
     profile_name="${profile_name%.mk}"
-    sh_toolchain_path="/opt/toolchains/dc/toolchains/${profile_name}"
+    toolchain_path="/opt/toolchains/dc/toolchains/${profile_name}"
 
     make_cmd="make"
+
     make_cmd+=" toolchain_profile=${profile_name}"
     make_cmd+=" makejobs=${make_jobs}"
     make_cmd+=" verbose=0"
-    make_cmd+=" sh_toolchain_path=${sh_toolchain_path}"
+    make_cmd+=" toolchain_path=${toolchain_path}"
     make_cmd+=" newlib_iconv_encodings=us_ascii,utf8,utf16,ucs_2_internal,ucs_4_internal"
     make_cmd+=" newlib_multibyte=1"
-    make_cmd+=" build-sh4"
 
-    if [[ "$profile_name" == *"-dev" ]]; then
-      if [[ "$profile_name" != "13."* ]]; then
-        make_cmd+=" enable_rust=1"
-      fi
-    fi
+    make_cmd+=" build"
 
     if [ "$build_dev_toolchains_only" = true ]; then
         if [[ "$profile_name" != *"-dev" ]]; then
@@ -62,7 +58,7 @@ for file in profiles/profile.*.mk; do
     echo "${make_cmd}"
     echo "***************************************"
     echo "${make_cmd}" | bash
-    echo "$(date '+%Y-%m-%d %r')" >> $sh_toolchain_path/build_date.txt
+    echo "$(date '+%Y-%m-%d %r')" >> $toolchain_path/build_date.txt
     echo "***********************************************"
     echo "+++ Cleaning up after building $profile_name..."
     echo "***********************************************"
