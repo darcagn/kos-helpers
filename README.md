@@ -23,8 +23,10 @@ If you'd like to build various toolchains to go with this configuration, complet
 ## Use
 * `kos-editenv`: Bring up text editor to modify KOS environment settings.
 * `kos-environ <PATH>`: Apply KOS environment using `<PATH>` as `$KOS_BASE`. Toolchain symlinks will be updated to point to the proper locations within `$KOS_BASE`.
-* `kos-build <PATH>`: Apply KOS environment using `<PATH>` as `$KOS_BASE` and build KOS.
-* `kos-rebuild <PATH>`: Apply KOS environment using `<PATH>` as `$KOS_BASE`, make clean, and build KOS.
+* `kos-build <PATH>`: Build KOS. 
+* `kos-rebuild <PATH>`: Clean and build KOS. If `<PATH>` is provided, use it as `$KOS_BASE` and re-apply KOS environment first.
+* `kos-build-ports`: Build all kos-ports that are not installed. If `<PATH>` is provided, use it as `$KOS_BASE` and re-apply KOS environment first.
+* `kos-rebuild-ports`: Clean and rebuild all kos-ports. If `<PATH>` is provided, use it as `$KOS_BASE` and re-apply KOS environment first.
 * `kos-info`: Dump information about your current KOS environment to stdout.
 
 <img width="675" alt="image" src="https://github.com/darcagn/kos-helpers/assets/5105103/48080da2-c87f-4464-bde5-7a8ad141cf9a">
