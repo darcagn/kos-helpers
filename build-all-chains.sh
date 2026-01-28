@@ -45,8 +45,6 @@ for file in profiles/dreamcast/*.mk; do
     make_cmd+=" newlib_iconv_encodings=us_ascii,utf8,utf16,ucs_2_internal,ucs_4_internal"
     make_cmd+=" newlib_multibyte=1"
 
-    make_cmd+=" build"
-
     if [ "$build_dev_toolchains_only" = true ]; then
         if [[ "$profile_name" != *"-dev" ]]; then
             continue
@@ -57,7 +55,7 @@ for file in profiles/dreamcast/*.mk; do
     echo "+++ Building $profile_name toolchain..."
     echo "${make_cmd}"
     echo "***************************************"
-    echo "${make_cmd}" | bash
+    echo "${make_cmd} build" | bash
     echo "$(date '+%Y-%m-%d %r')" >> $toolchain_path/build_date.txt
     echo "***********************************************"
     echo "+++ Cleaning up after building $profile_name..."
