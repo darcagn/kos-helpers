@@ -25,8 +25,8 @@ while [[ $# -gt 0 ]]; do
     shift
 done
 
-if [ "${PWD##*/}" != "dc-chain" ]; then
-  echo "This script must be run inside the dc-chain directory."
+if [ "${PWD##*/}" != "kos-chain" ]; then
+  echo "This script must be run inside the kos-chain directory."
   exit 1
 fi
 

@@ -14,7 +14,7 @@ Instead of juggling multiple `environ.sh` scripts in each KOS dir, the scripts p
 ## Building toolchains
 If you'd like to build various toolchains to go with this configuration, complete the following steps:
 * Clone a KOS repo: `git clone https://github.com/KallistiOS/KallistiOS.git /opt/toolchains/dc/kos-build`
-* Enter the `dc-chain` directory: `cd /opt/toolchains/dc/kos-build/utils/dc-chain`
+* Enter the `kos-chain` directory: `cd /opt/toolchains/dc/kos-build/utils/kos-chain`
 * Build all toolchain profiles by running `/opt/toolchains/dc/kos-helpers/build-all-chains.sh`
   * Each toolchain profile will be built to `/opt/toolchains/dc/toolchains/<PROFILE_NAME>`
   * Build only development profiles by passing the `--dev-only` option to the script
